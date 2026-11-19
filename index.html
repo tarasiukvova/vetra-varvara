@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Варвара Шевчук і Loft Луцьк</title>
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Варвара Шевчук — фотограф у Луцьку: сімейні, весільні й портретні фотосесії. Фотостудія Loft на вул. Млиновій, 13: оренда 600 грн за годину.">
+<meta name="description" content="Варвара Шевчук — фотограф у Луцьку: сімейні, дитячі, весільні фотосесії, зйомка вагітності й пар. Фотостудія Loft на вул. Млиновій, 13: оренда 600 грн за годину.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Forum&family=Onest:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@0;1&family=Oranienbaum&family=Ysabeau+Office:wght@400;500;600&family=Anonymous+Pro&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -17,7 +17,7 @@
       "@type": "Person",
       "name": "Варвара Шевчук",
       "jobTitle": "Фотограф",
-      "description": "Сімейні, весільні й портретні фотосесії в Луцьку; відеозйомка (vetra).",
+      "description": "Сімейні, дитячі й весільні фотосесії, зйомка вагітності та пар у Луцьку.",
       "address": {"@type": "PostalAddress", "addressLocality": "Луцьк", "addressCountry": "UA"},
       "sameAs": ["https://www.instagram.com/vvvarka/"],
       "worksFor": {"@id": "#loft"}
@@ -26,7 +26,7 @@
       "@type": "LocalBusiness",
       "@id": "#loft",
       "name": "Фотостудія Loft",
-      "description": "Лофт-фотостудія в центрі Луцька з денним світлом, цеглою й вінтажними меблями. Погодинна оренда для фото- і відеозйомок.",
+      "description": "Лофт-фотостудія в центрі Луцька: великі вікна, цегла, вінтажні меблі. Погодинна оренда для фото- і відеозйомок.",
       "foundingDate": "2016",
       "telephone": "+380635605058",
       "priceRange": "600 грн/год",
@@ -38,176 +38,183 @@
 }
 </script>
 <style>
-/* Ідея: сайт як аркуш плівки. Перемикач змінює «світло»: день надворі (фотограф) і лампи в лофті (студія). */
+/* Ідея: перемикач змінює не лише кольори, а й голос сайту.
+   Фотограф — день надворі, тепла антиква з живим курсивом.
+   Студія — вечір у лофті під лампами, вузька вінтажна антиква. */
 :root{
-  --paper:#E8E5DF;
-  --ink:#1D1A17;
-  --muted:#6B645C;
-  --line:#CBC5BB;
-  --accent:#C9971A;
-  --frame:#1D1A17;
-  --display:"Forum", "Times New Roman", serif;
-  --body:"Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --paper:#E9E5DD;
+  --ink:#1F1B17;
+  --muted:#6E665D;
+  --line:#CDC6BA;
+  --accent:#B98A16;
+  --frame:#1F1B17;
+  --display:"Bona Nova", Georgia, serif;
+  --body:"Ysabeau Office", "Segoe UI", system-ui, sans-serif;
+  --type:"Anonymous Pro", ui-monospace, Menlo, monospace;
+  --h1:clamp(60px, min(10vw, 17svh), 150px);
   color-scheme: light;
 }
 body[data-mode="studio"]{
-  --paper:#16130F;
-  --ink:#EEE5D8;
-  --muted:#A2968A;
-  --line:#3A332C;
-  --accent:#E09A4F;
-  --frame:#0C0A08;
+  --paper:#17130F;
+  --ink:#EFE6D8;
+  --muted:#A69A8C;
+  --line:#3B342C;
+  --accent:#DE9A4E;
+  --frame:#0D0B09;
+  --display:"Oranienbaum", "Times New Roman", serif;
+  --h1:clamp(68px, min(12vw, 19svh), 176px);
   color-scheme: dark;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);transition:background .6s ease,color .6s ease}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 18px/1.6 var(--body);transition:background .6s ease,color .6s ease}
 img{max-width:100%;display:block}
 a{color:inherit}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.wrap{width:min(1240px,100% - 32px);margin-inline:auto}
-.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
-h1,h2,h3{font-family:var(--display);font-weight:400;line-height:.95;margin:0;text-wrap:balance}
+.wrap{width:min(1220px,100% - 32px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1;margin:0;text-wrap:balance}
+.label{font-family:var(--display);font-style:italic;font-size:20px;color:var(--muted)}
+body[data-mode="studio"] .label{font-style:normal;font-size:22px}
 
-/* верх */
-.bar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:background .6s ease,border-color .6s ease}
+.bar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:background .6s ease,border-color .6s ease}
 .bar .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding-block:12px}
 .brand{font-family:var(--display);font-size:24px;text-decoration:none;white-space:nowrap}
-.bar .ig{justify-self:end;text-decoration:none}
+.bar .ig{justify-self:end;text-decoration:none;font-size:15px;color:var(--muted)}
 .bar .ig:hover{color:var(--accent)}
-.switch{position:relative;display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink);border-radius:999px;padding:3px;min-width:260px}
-.switch button{position:relative;z-index:1;appearance:none;border:0;background:none;color:var(--ink);font:500 14px/1 var(--body);padding:10px 18px;border-radius:999px;cursor:pointer;transition:color .4s ease}
+.switch{position:relative;display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink);border-radius:999px;padding:3px;min-width:250px}
+.switch button{position:relative;z-index:1;appearance:none;border:0;background:none;color:var(--ink);font:500 15px/1 var(--body);padding:10px 18px;border-radius:999px;cursor:pointer;transition:color .4s ease}
 .switch button[aria-pressed="true"]{color:var(--paper)}
 .switch .thumb{position:absolute;top:3px;bottom:3px;left:3px;width:calc(50% - 3px);background:var(--ink);border-radius:999px;transition:transform .45s cubic-bezier(.7,0,.2,1),background .6s ease}
 body[data-mode="studio"] .switch .thumb{transform:translateX(100%)}
 
-/* видимість режимів */
 body[data-mode="photo"] .only-studio,body[data-mode="studio"] .only-photo{display:none}
 
-/* перша сторінка */
-.hero{padding-block:56px 40px}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-.hero h1{font-size:clamp(56px,min(10.5vw,17svh),152px);letter-spacing:-.01em}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.lead{font-size:20px;line-height:1.5;max-width:34ch;margin:28px 0 0}
-.eyebrow{display:flex;gap:14px;align-items:center;margin-bottom:22px;color:var(--muted)}
-.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;text-decoration:none;font-weight:500;border:1px solid var(--ink);background:none;color:var(--ink);font:500 15px/1 var(--body);cursor:pointer}
+.hero{padding-block:48px 32px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero h1{font-size:var(--h1);letter-spacing:-.01em}
+.hero h1 em{color:var(--accent)}
+body[data-mode="studio"] .hero h1 em{font-style:normal}
+.hero .label{margin-bottom:18px}
+.lead{font-size:21px;line-height:1.5;max-width:36ch;margin:26px 0 0}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;padding:14px 22px;border-radius:999px;text-decoration:none;border:1px solid var(--ink);background:none;color:var(--ink);font:500 16px/1 var(--body);cursor:pointer}
 .btn.solid{background:var(--ink);color:var(--paper)}
 .btn:hover{border-color:var(--accent)}
 .btn.solid:hover{background:var(--accent);border-color:var(--accent);color:var(--frame)}
-.hero figure{margin:0;position:relative}
+.hero figure{margin:0}
 .hero figure img{width:100%;aspect-ratio:4/5;object-fit:cover;max-height:calc(100svh - 150px)}
-.hero figcaption{position:absolute;left:0;bottom:-26px;color:var(--muted)}
+.hero figcaption{margin-top:10px;font-size:15px;color:var(--muted)}
 
-/* плівкова стрічка */
-.film{background:var(--frame);padding:22px 0 14px;margin-top:56px;overflow:hidden}
-.film .holes{height:10px;background:repeating-linear-gradient(90deg,transparent 0 14px,#3b342d 14px 26px);opacity:.9}
+.film{background:var(--frame);padding:18px 0 12px;margin-top:40px}
+.film .holes{height:9px;background:repeating-linear-gradient(90deg,transparent 0 14px,#3c352e 14px 26px)}
 .film .row{display:flex;gap:6px;padding:10px 6px;overflow-x:auto;scrollbar-width:thin}
-.film .cell{flex:0 0 auto;width:min(210px,42vw);color:#C9BBA6}
-.film .cell img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:saturate(.95)}
-.film .cell span{display:block;margin-top:8px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:#D7A02E}
+.film .cell{flex:0 0 auto;width:min(200px,40vw)}
+.film .cell img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.film .cell span{display:block;margin-top:6px;font-family:var(--type);font-size:12px;color:#D4A03A}
 
-/* секції */
-section.block{padding-block:96px 24px}
-.head{display:grid;grid-template-columns:200px 1fr;gap:32px;margin-bottom:48px;align-items:baseline}
-.head .mono{color:var(--muted)}
-.head h2{font-size:clamp(44px,6vw,84px)}
+section.block{padding-block:88px 16px}
+.head{display:grid;grid-template-columns:220px 1fr;gap:32px;margin-bottom:44px;align-items:baseline}
+.head h2{font-size:clamp(42px,5.5vw,76px)}
+.head p{grid-column:2;margin:14px 0 0;color:var(--muted);max-width:58ch}
 
-/* жанри як індекс */
-.index{border-top:1px solid var(--ink)}
-.index li{list-style:none;display:grid;grid-template-columns:200px 1fr 1.2fr 140px;gap:32px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
-.index{padding:0;margin:0}
-.index h3{font-size:clamp(32px,4vw,52px)}
-.index p{margin:0;color:var(--muted);max-width:44ch}
-.index img{width:140px;aspect-ratio:1;object-fit:cover;filter:grayscale(.15)}
-.index .tag{color:var(--accent)}
+.kinds{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.kinds li{display:grid;grid-template-columns:220px 1fr 120px;gap:32px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+.kinds h3{font-size:clamp(30px,3.4vw,44px)}
+.kinds p{margin:0;max-width:56ch}
+.kinds img{width:120px;aspect-ratio:1;object-fit:cover}
 
-/* галерея */
+.price{border:1px dashed var(--accent);padding:28px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;background:color-mix(in srgb,var(--accent) 8%,transparent)}
+.price h3{font-size:34px}
+.price p{margin:8px 0 0;color:var(--muted)}
+
+.tips{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--ink)}
+.tips div{padding:26px 32px 26px 0;border-bottom:1px solid var(--line)}
+.tips div:nth-child(even){padding-left:32px;border-left:1px solid var(--line)}
+.tips h3{font-size:30px;margin-bottom:10px}
+.tips p{margin:0;color:var(--muted)}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
+.steps li{padding:24px 24px 0 0}
+.steps li+li{padding-left:24px;border-left:1px solid var(--line)}
+.steps b{display:block;font-family:var(--display);font-weight:400;font-size:46px;line-height:1;color:var(--accent)}
+.steps p{margin:12px 0 0}
+
 .gallery{columns:3 260px;column-gap:14px}
 .gallery figure{margin:0 0 14px;break-inside:avoid}
-.gallery img{width:100%}
-.gallery figcaption{margin-top:6px;color:var(--muted)}
+.gallery figcaption{margin-top:6px;font-size:15px;color:var(--muted)}
 
-/* кроки */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--ink)}
-.steps div{padding:28px 28px 0 0;border-right:1px solid var(--line)}
-.steps div+div{padding-left:28px}
-.steps div:last-child{border-right:0}
-.steps b{display:block;font-family:var(--display);font-weight:400;font-size:34px;line-height:1.05;margin:12px 0 10px}
-.steps p{margin:0;color:var(--muted)}
-
-/* питання */
 .faq{max-width:860px}
-.faq details{border-top:1px solid var(--line);padding:20px 0}
+.faq details{border-top:1px solid var(--line);padding:18px 0}
 .faq details:last-child{border-bottom:1px solid var(--line)}
-.faq summary{cursor:pointer;font-size:21px;list-style:none;display:flex;justify-content:space-between;gap:24px}
-.faq summary::after{content:"+";font-family:var(--mono);color:var(--accent)}
+.faq summary{cursor:pointer;font-size:21px;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:24px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-weight:400}
 .faq details[open] summary::after{content:"–"}
-.faq p{margin:12px 0 0;color:var(--muted);max-width:62ch}
-.todo{border-bottom:1px dashed var(--accent);color:var(--ink);background:color-mix(in srgb,var(--accent) 14%,transparent);padding:0 4px}
+.faq p{margin:10px 0 0;color:var(--muted);max-width:62ch}
+.todo{border-bottom:1px dashed var(--accent);color:var(--ink);background:color-mix(in srgb,var(--accent) 16%,transparent);padding:0 4px}
+.link-btn{appearance:none;border:0;background:none;padding:0;font:inherit;color:var(--accent);text-decoration:underline;cursor:pointer}
 
-/* паспорт студії */
-.spec{border:1px solid var(--ink);font-family:var(--mono);font-size:13.5px;margin-top:32px;max-width:520px}
-.spec div{display:grid;grid-template-columns:150px 1fr;border-bottom:1px solid var(--line)}
+.spec{border:1px solid var(--ink);font-family:var(--type);font-size:15px;margin:30px 0 0;max-width:540px}
+.spec div{display:grid;grid-template-columns:140px 1fr;border-bottom:1px solid var(--line)}
 .spec div:last-child{border-bottom:0}
-.spec dt,.spec dd{margin:0;padding:11px 14px}
-.spec dt{color:var(--muted);letter-spacing:.08em;text-transform:uppercase;font-size:11.5px;border-right:1px solid var(--line)}
-.spec dd b{color:var(--accent);font-weight:500}
+.spec dt,.spec dd{margin:0;padding:10px 14px}
+.spec dt{color:var(--muted);border-right:1px solid var(--line)}
+.spec dd b{color:var(--accent);font-weight:400}
 
-/* зони студії */
-.zones{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
-.zone{position:relative;margin:0;grid-column:span 4}
+.zones{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.zone{margin:0;grid-column:span 4}
 .zone.wide{grid-column:span 6}
 .zone img{width:100%;aspect-ratio:4/5;object-fit:cover}
-.zone.wide img{aspect-ratio:5/6}
-.zone figcaption{display:flex;justify-content:space-between;gap:12px;padding-top:10px;border-top:1px solid var(--line);margin-top:10px}
-.zone figcaption b{font-family:var(--display);font-weight:400;font-size:26px;line-height:1.1}
-.zone figcaption span{color:var(--muted)}
+.zone figcaption{border-top:1px solid var(--line);margin-top:10px;padding-top:10px}
+.zone figcaption b{display:block;font-family:var(--display);font-weight:400;font-size:28px;line-height:1.1}
+.zone figcaption span{display:block;margin-top:4px;color:var(--muted);font-size:16px}
 
-/* відгуки */
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;border-top:1px solid var(--ink);padding-top:24px}
+.who h3{font-size:30px;margin-bottom:8px}
+.who p{margin:0;color:var(--muted)}
+
 .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.quotes blockquote{margin:0;font-family:var(--display);font-size:28px;line-height:1.2}
-.quotes cite{display:block;margin-top:14px;font-style:normal}
+.quotes blockquote{margin:0;font-family:var(--display);font-size:30px;line-height:1.15}
+.quotes cite{display:block;margin-top:12px;font:400 15px/1.4 var(--body);color:var(--muted);font-style:normal}
 
-/* бронювання */
-.cta{margin-top:96px;background:var(--ink);color:var(--paper);transition:background .6s ease,color .6s ease}
-.cta .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;padding-block:72px;align-items:end}
-.cta h2{font-size:clamp(48px,7vw,96px)}
+.cta{margin-top:88px;background:var(--ink);color:var(--paper);transition:background .6s ease,color .6s ease}
+.cta .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;padding-block:68px;align-items:end}
+.cta h2{font-size:clamp(46px,6.5vw,92px)}
 .cta .btn{border-color:var(--paper);color:var(--paper)}
 .cta .btn.solid{background:var(--paper);color:var(--ink)}
 .cta .btn.solid:hover{background:var(--accent);border-color:var(--accent)}
-.cta p{margin:0 0 6px;color:color-mix(in srgb,var(--paper) 70%,transparent)}
-.cta .contacts{font-family:var(--mono);font-size:14px;letter-spacing:.04em;display:grid;gap:8px;margin-top:20px}
+.cta .note{margin:0 0 8px;opacity:.75}
+.cta .contacts{font-family:var(--type);font-size:15px;display:grid;gap:6px;margin-top:20px;opacity:.85}
 
-footer{padding-block:28px 40px;color:var(--muted)}
+footer{padding-block:26px 40px;color:var(--muted);font-size:15px}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 
-/* шторка при перемиканні */
 .shutter{position:fixed;inset:0;z-index:50;pointer-events:none;background:var(--frame);clip-path:inset(0 100% 0 0)}
 .shutter.go{animation:shut .7s cubic-bezier(.7,0,.2,1)}
 @keyframes shut{0%{clip-path:inset(0 100% 0 0)}45%{clip-path:inset(0 0 0 0)}55%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 0 100%)}}
 
 @media (max-width:900px){
   .hero .wrap,.cta .wrap{grid-template-columns:1fr}
-  .head{grid-template-columns:1fr;gap:10px}
-  .index li{grid-template-columns:1fr 96px;gap:8px 16px}
-  .index li .mono{grid-column:1/-1}
-  .index li p{grid-column:1}
-  .index img{width:96px;grid-row:2/4;grid-column:2}
-  .steps,.quotes{grid-template-columns:1fr}
-  .steps div,.steps div+div{padding:24px 0;border-right:0;border-bottom:1px solid var(--line)}
+  .head{grid-template-columns:1fr;gap:8px}
+  .head p{grid-column:1}
+  .kinds li{grid-template-columns:1fr 88px;gap:6px 16px}
+  .kinds h3,.kinds p{grid-column:1}
+  .kinds img{width:88px;grid-row:1/3;grid-column:2}
+  .tips,.quotes,.who{grid-template-columns:1fr}
+  .tips div,.tips div:nth-child(even){padding:22px 0;border-left:0}
+  .steps{grid-template-columns:1fr 1fr}
+  .steps li,.steps li+li{padding:20px 16px 20px 0;border-left:0;border-bottom:1px solid var(--line)}
   .zone,.zone.wide{grid-column:span 12}
+  .price{grid-template-columns:1fr}
 }
 @media (max-width:600px){
   .bar .wrap{grid-template-columns:1fr auto}
   .bar .ig{display:none}
   .switch{min-width:0}
-  .switch button{padding:9px 12px;font-size:13px}
+  .switch button{padding:9px 12px;font-size:14px}
   .brand{font-size:20px}
   .spec div{grid-template-columns:110px 1fr}
+  .steps{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
@@ -218,103 +225,127 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 
 <header class="bar">
   <div class="wrap">
-    <a class="brand" href="#photographer"><span class="only-photo">vetra&amp;varvara</span><span class="only-studio">Loft · Луцьк</span></a>
+    <a class="brand" href="#photographer"><span class="only-photo">Варвара Шевчук</span><span class="only-studio">Loft</span></a>
     <div class="switch" role="group" aria-label="Що показати">
       <span class="thumb" aria-hidden="true"></span>
       <button type="button" id="btn-photo" data-to="photographer" aria-pressed="true">Фотограф</button>
       <button type="button" id="btn-studio" data-to="studio" aria-pressed="false">Студія</button>
     </div>
-    <a class="ig mono only-photo" href="https://www.instagram.com/vvvarka/">@vvvarka</a>
-    <a class="ig mono only-studio" href="https://www.instagram.com/loftlutsk/">@loftlutsk</a>
+    <a class="ig only-photo" href="https://www.instagram.com/vvvarka/">Instagram @vvvarka</a>
+    <a class="ig only-studio" href="https://www.instagram.com/loftlutsk/">Instagram @loftlutsk</a>
   </div>
 </header>
 
 <main>
 
-<!-- ============ ФОТОГРАФ ============ -->
 <div class="only-photo">
 
   <section class="hero">
     <div class="wrap">
       <div>
-        <div class="eyebrow mono">Фотограф · Луцьк</div>
-        <h1>Варвара<br><em>Шевчук</em></h1>
-        <p class="lead">Сімейні, весільні й портретні фотосесії. Тепле світло, справжні емоції, кадри, які хочеться друкувати.</p>
+        <div class="label">Фотограф у Луцьку</div>
+        <h1>Варвара <em>Шевчук</em></h1>
+        <p class="lead">Знімаю родини, дітей, пари й весілля. Допомагаю розслабитися перед камерою, тож на фото ви виглядаєте собою, а не скутими.</p>
         <div class="actions">
-          <a class="btn solid" href="https://www.instagram.com/vvvarka/">Написати в Instagram</a>
+          <a class="btn solid" href="https://www.instagram.com/vvvarka/">Запитати про дату</a>
           <button type="button" class="btn" data-to="studio">Моя студія Loft</button>
         </div>
       </div>
       <figure>
-        <img src="p-hero.jpg" alt="Родина з дитиною на плечах тата біля озера на заході сонця" width="907" height="1208">
-        <figcaption class="mono">Кадр 01 · сімейна зйомка</figcaption>
+        <img src="p-hero.jpg" alt="Тато тримає на плечах малюка, мама сміється, позаду озеро на заході сонця" width="907" height="1208">
+        <figcaption>Сімейна зйомка на заході сонця</figcaption>
       </figure>
     </div>
   </section>
 
-  <div class="film" aria-label="Добірка кадрів">
+  <div class="film" aria-label="Кадри з різних зйомок">
     <div class="holes"></div>
     <div class="row">
-      <div class="cell"><img src="p-hands.jpg" alt="Дитяча й мамина руки над жовтими квітами" loading="lazy"><span>▸ 02A</span></div>
-      <div class="cell"><img src="p-autumn.jpg" alt="Мама з донькою на плечах в осінньому полі" loading="lazy"><span>▸ 03A</span></div>
-      <div class="cell"><img src="p-mushroom.jpg" alt="Малюк тримає гриб у траві" loading="lazy"><span>▸ 04A</span></div>
-      <div class="cell"><img src="p-dogs.jpg" alt="Пара обіймає двох собак" loading="lazy"><span>▸ 05A</span></div>
-      <div class="cell"><img src="p-bride.jpg" alt="Наречена в сукні з відкритими плечима" loading="lazy"><span>▸ 06A</span></div>
-      <div class="cell"><img src="p-castle.jpg" alt="Пара на тлі Луцького замку, чорно-біле фото" loading="lazy"><span>▸ 07A</span></div>
-      <div class="cell"><img src="p-bloom.jpg" alt="Вагітна жінка з букетом квітів" loading="lazy"><span>▸ 08A</span></div>
-      <div class="cell"><img src="p-lake.jpg" alt="Пара на містку над озером у рожевих сутінках" loading="lazy"><span>▸ 09A</span></div>
+      <div class="cell"><img src="p-hands.jpg" alt="Руки дитини й мами над жовтими квітами" loading="lazy"><span>02</span></div>
+      <div class="cell"><img src="p-autumn.jpg" alt="Донька на плечах у мами в осінньому полі" loading="lazy"><span>03</span></div>
+      <div class="cell"><img src="p-mushroom.jpg" alt="Малюк тримає гриб" loading="lazy"><span>04</span></div>
+      <div class="cell"><img src="p-dogs.jpg" alt="Пара обіймає двох собак" loading="lazy"><span>05</span></div>
+      <div class="cell"><img src="p-bloom.jpg" alt="Вагітна жінка з букетом" loading="lazy"><span>06</span></div>
+      <div class="cell"><img src="p-castle.jpg" alt="Пара біля Луцького замку" loading="lazy"><span>07</span></div>
+      <div class="cell"><img src="p-bride.jpg" alt="Наречена в сукні" loading="lazy"><span>08</span></div>
+      <div class="cell"><img src="p-lake.jpg" alt="Пара на містку над озером" loading="lazy"><span>09</span></div>
     </div>
     <div class="holes"></div>
   </div>
 
   <section class="block">
     <div class="wrap">
-      <div class="head"><span class="mono">Що я знімаю</span><h2>Чотири жанри, один погляд</h2></div>
-      <ul class="index">
-        <li><span class="mono tag">01 · #сімейні</span><h3>Сімейні</h3><p>На природі, вдома чи в студії. З дітьми, бабусями й собаками, без натягнутих поз.</p><img src="p-autumn.jpg" alt="" loading="lazy"></li>
-        <li><span class="mono tag">02 · #varkawed</span><h3>Весільні</h3><p>Від зборів нареченої до вечора. Репортаж і портрети пари.</p><img src="p-wed-door.jpg" alt="" loading="lazy"></li>
-        <li><span class="mono tag">03 · #varkasportrait</span><h3>Портрет</h3><p>Індивідуальні, парні й зйомки вагітності.</p><img src="p-bloom.jpg" alt="" loading="lazy"></li>
-        <li><span class="mono tag">04 · #vetra_video</span><h3>Відео</h3><p>Окремий напрям vetra: відеозйомка весіль і подій.</p><img src="p-ivy.jpg" alt="" loading="lazy"></li>
+      <div class="head"><span class="label">Зйомки</span><h2>Що я знімаю</h2></div>
+      <ul class="kinds">
+        <li><h3>Сімейна</h3><p>Уся родина в одному кадрі: з бабусями, старшими дітьми й собакою. Знімаємо на природі, вдома або в студії, коли надворі холодно.</p><img src="p-autumn.jpg" alt="" loading="lazy"></li>
+        <li><h3>Дитяча</h3><p>Малюки не сидять на місці, і не треба. Знімаю в русі й між іграми, а перерви на перекус закладаємо в план.</p><img src="p-mushroom.jpg" alt="" loading="lazy"></li>
+        <li><h3>Вагітність</h3><p>Вдома, в студії чи на природі. Можна разом із партнером і старшою дитиною.</p><img src="p-bloom.jpg" alt="" loading="lazy"></li>
+        <li><h3>Пари</h3><p>Love story, річниця або просто гарні фото удвох. Добре виходить і з улюбленою собакою.</p><img src="p-dogs.jpg" alt="" loading="lazy"></li>
+        <li><h3>Весілля</h3><p>Збори, церемонія, прогулянка, вечір. Скільки годин знімати, вирішуємо під ваш день.</p><img src="p-wed-door.jpg" alt="" loading="lazy"></li>
       </ul>
     </div>
   </section>
 
   <section class="block">
     <div class="wrap">
-      <div class="head"><span class="mono">Портфоліо</span><h2>Останні зйомки</h2></div>
+      <div class="price">
+        <div>
+          <h3>Вартість</h3>
+          <p><span class="todo">Уточнити у Варвари: ціна сімейної зйомки, скільки триває, скільки фото в обробці, ціна весілля за годину.</span></p>
+        </div>
+        <a class="btn solid" href="https://www.instagram.com/vvvarka/">Дізнатися ціну</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="head"><span class="label">Перед зйомкою</span><h2>Як підготуватися</h2></div>
+      <div class="tips">
+        <div><h3>Одяг</h3><p>Оберіть 2–3 спокійні кольори, які пасують між собою. Великі логотипи, неон і дрібна смужка на фото відволікають.</p></div>
+        <div><h3>Діти</h3><p>Плануйте зйомку на час, коли малюк виспаний і нагодований. Візьміть улюблену іграшку й перекус.</p></div>
+        <div><h3>Позування</h3><p>Не вмієте позувати, і це нормально. Я підкажу, куди стати й що робити, а найкращі кадри зазвичай виходять між позами.</p></div>
+        <div><h3>Пора року</h3><p>З листопада по березень зручніше знімати в студії: там багато денного світла і ви не залежите від погоди.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="head"><span class="label">Порядок</span><h2>Як усе відбувається</h2></div>
+      <ol class="steps">
+        <li><b>1</b><p>Пишете в Instagram: дату, хто буде в кадрі й де хочеться знімати.</p></li>
+        <li><b>2</b><p>Узгоджуємо місце, час і образи. Надворі найгарніше світло вранці або за годину-дві до заходу.</p></li>
+        <li><b>3</b><p>Зйомка. Триває <span class="todo">уточнити</span>.</p></li>
+        <li><b>4</b><p>Готові фото за <span class="todo">… днів</span>, онлайн-галереєю.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="head"><span class="label">Портфоліо</span><h2>Останні зйомки</h2></div>
       <div class="gallery">
-        <figure><img src="p-dogs.jpg" alt="Пара з двома собаками у світлі заходу" loading="lazy"><figcaption class="mono">Пара · з собаками</figcaption></figure>
-        <figure><img src="p-wed-bw.jpg" alt="Наречені, чорно-білий кадр" loading="lazy"><figcaption class="mono">Весілля</figcaption></figure>
-        <figure><img src="p-mushroom.jpg" alt="Малюк із грибом" loading="lazy"><figcaption class="mono">Дитяча</figcaption></figure>
-        <figure><img src="p-castle.jpg" alt="Пара біля Луцького замку" loading="lazy"><figcaption class="mono">Луцький замок</figcaption></figure>
-        <figure><img src="p-hands.jpg" alt="Руки над квітами" loading="lazy"><figcaption class="mono">Сімейна · деталі</figcaption></figure>
-        <figure><img src="p-wed-door.jpg" alt="Наречені біля старих дверей" loading="lazy"><figcaption class="mono">Весілля</figcaption></figure>
-        <figure><img src="p-ivy.jpg" alt="Пара на лаві біля стіни з плющем" loading="lazy"><figcaption class="mono">Пара</figcaption></figure>
-        <figure><img src="p-table.jpg" alt="Пара в студії, чорно-біле фото" loading="lazy"><figcaption class="mono">Студія Loft</figcaption></figure>
-        <figure><img src="p-lake.jpg" alt="Пара на містку над озером" loading="lazy"><figcaption class="mono">Love story</figcaption></figure>
+        <figure><img src="p-dogs.jpg" alt="Пара з двома собаками" loading="lazy"><figcaption>Пара з собаками</figcaption></figure>
+        <figure><img src="p-wed-bw.jpg" alt="Наречені, чорно-білий кадр" loading="lazy"><figcaption>Весілля</figcaption></figure>
+        <figure><img src="p-mushroom.jpg" alt="Малюк із грибом" loading="lazy"><figcaption>Дитяча зйомка</figcaption></figure>
+        <figure><img src="p-castle.jpg" alt="Пара біля Луцького замку" loading="lazy"><figcaption>Біля Луцького замку</figcaption></figure>
+        <figure><img src="p-hands.jpg" alt="Руки над квітами" loading="lazy"><figcaption>Сімейна зйомка</figcaption></figure>
+        <figure><img src="p-wed-door.jpg" alt="Наречені біля старих дверей" loading="lazy"><figcaption>Весілля</figcaption></figure>
+        <figure><img src="p-ivy.jpg" alt="Пара на лаві біля стіни з плющем" loading="lazy"><figcaption>Пара</figcaption></figure>
+        <figure><img src="p-table.jpg" alt="Пара в студії, чорно-білий кадр" loading="lazy"><figcaption>У студії Loft</figcaption></figure>
+        <figure><img src="p-lake.jpg" alt="Пара на містку над озером" loading="lazy"><figcaption>Love story</figcaption></figure>
       </div>
     </div>
   </section>
 
   <section class="block">
     <div class="wrap">
-      <div class="head"><span class="mono">Як це відбувається</span><h2>Від повідомлення до фото</h2></div>
-      <div class="steps">
-        <div><span class="mono">Крок 1</span><b>Пишете в дірект</b><p>Дата, скільки вас буде і який настрій хочеться: спокійний, веселий, кіношний.</p></div>
-        <div><span class="mono">Крок 2</span><b>Обираємо місце</b><p>Природа, місто, ваш дім або студія Loft на Млиновій, якщо надворі негода.</p></div>
-        <div><span class="mono">Крок 3</span><b>Зйомка й готові кадри</b><p>Строк обробки й кількість фото: <span class="todo">уточнити у Варвари</span>.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="wrap">
-      <div class="head"><span class="mono">Часті питання</span><h2>Перш ніж писати</h2></div>
+      <div class="head"><span class="label">Питання</span><h2>Часто запитують</h2></div>
       <div class="faq">
-        <details open><summary>Скільки коштує сімейна фотосесія?</summary><p><span class="todo">Вказати вартість і що входить: тривалість, кількість фото, строк.</span></p></details>
-        <details><summary>Де можна знімати?</summary><p>У студії Loft (вул. Млинова, 13, центр Луцька) або на локаціях у місті й поза ним: біля замку, на озері, в полі, у вас удома.</p></details>
-        <details><summary>Чи можна з маленькими дітьми й тваринами?</summary><p>Так. Дитячі й сімейні зйомки з собаками є в портфоліо. Темп підлаштовуємо під малюка.</p></details>
-        <details><summary>Ви знімаєте відео?</summary><p>Так, відео — окремий напрям vetra. Можна поєднати з фотозйомкою весілля чи події.</p></details>
+        <details open><summary>Що буде, якщо в день зйомки дощ?</summary><p>Перенесемо на інший день або знімемо в студії Loft.</p></details>
+        <details><summary>Як забронювати дату?</summary><p>Напишіть в Instagram @vvvarka. Дата закріплюється після <span class="todo">уточнити: передоплата чи інше</span>.</p></details>
+        <details><summary>Можна прийти з собакою?</summary><p>Так, такі зйомки є в портфоліо.</p></details>
       </div>
     </div>
   </section>
@@ -322,81 +353,95 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
   <section class="cta">
     <div class="wrap">
       <div>
-        <p class="mono">Вільні дати на сезон</p>
-        <h2>Забронювати зйомку</h2>
+        <p class="note">Сімейні, дитячі, весільні зйомки в Луцьку</p>
+        <h2>Запитати вільну дату</h2>
       </div>
       <div>
         <div class="actions">
           <a class="btn solid" href="https://www.instagram.com/vvvarka/">Написати в Instagram</a>
-          <button type="button" class="btn" data-to="studio">Подивитись студію</button>
+          <button type="button" class="btn" data-to="studio">Подивитися студію</button>
         </div>
-        <div class="contacts"><span>Instagram: @vvvarka</span><span>Луцьк, Україна</span></div>
+        <div class="contacts"><span>Instagram: @vvvarka</span></div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- ============ СТУДІЯ ============ -->
 <div class="only-studio">
 
   <section class="hero">
     <div class="wrap">
       <div>
-        <div class="eyebrow mono">Фотостудія · центр Луцька · з 2016</div>
-        <h1>Лофт на<br><em>Млиновій</em></h1>
-        <p class="lead">Вікна на всю стіну, стара цегла, вінтажні меблі й багато денного світла. Погодинна оренда для фото- і відеозйомок.</p>
+        <div class="label">Фотостудія в центрі Луцька</div>
+        <h1>Loft на <em>Млиновій</em></h1>
+        <p class="lead">Зал із вікнами на всю стіну, цеглою й вінтажними меблями. Здаємо погодинно для фото- і відеозйомок.</p>
         <dl class="spec">
-          <div><dt>Оренда</dt><dd><b>600 грн</b> / година</dd></div>
+          <div><dt>Ціна</dt><dd><b>600 грн</b> за годину</dd></div>
           <div><dt>Адреса</dt><dd>вул. Млинова, 13, Луцьк</dd></div>
-          <div><dt>Працює</dt><dd>з 2016 року</dd></div>
-          <div><dt>Бронювання</dt><dd>дірект @loftlutsk</dd></div>
-          <div><dt>Телефон</dt><dd>063 560 5058</dd></div>
-          <div><dt>Google</dt><dd>5,0 · 11 відгуків</dd></div>
-          <div><dt>Площа, стелі</dt><dd><span class="todo">уточнити</span></dd></div>
+          <div><dt>Світло</dt><dd>денне, з великих вікон</dd></div>
+          <div><dt>Працюємо</dt><dd>з 2016 року</dd></div>
+          <div><dt>Бронювання</dt><dd>дірект @loftlutsk або 063 560 5058</dd></div>
         </dl>
+        <div class="actions">
+          <a class="btn solid" href="https://www.instagram.com/loftlutsk/">Забронювати в дірект</a>
+        </div>
       </div>
       <figure>
         <img src="s-hero.jpg" alt="Дівчина читає в шкіряному кріслі біля великого вікна, на підлозі рудий кіт" width="928" height="1160">
-        <figcaption class="mono">Зона A · велике вікно</figcaption>
+        <figcaption>Крісло біля вікна</figcaption>
       </figure>
     </div>
   </section>
 
   <section class="block">
     <div class="wrap">
-      <div class="head"><span class="mono">Що є в кадрі</span><h2>Шість локацій в одному залі</h2></div>
+      <div class="head"><span class="label">Інтер'єр</span><h2>Що є в студії</h2><p>Кадри зроблені фотографами, які орендували студію.</p></div>
       <div class="zones">
-        <figure class="zone wide"><img src="s-window-bw.jpg" alt="Пара на тлі великого вікна, чорно-біле фото"><figcaption><b>Вікно на всю стіну</b><span class="mono">A</span></figcaption></figure>
-        <figure class="zone wide"><img src="s-tub.jpg" alt="Дівчина у вінтажній ванні біля цегляної стіни"><figcaption><b>Ванна на лапах</b><span class="mono">B</span></figcaption></figure>
-        <figure class="zone"><img src="s-brick.jpg" alt="Дівчина з книгою біля білої цегляної стіни"><figcaption><b>Біла цегла</b><span class="mono">C</span></figcaption></figure>
-        <figure class="zone"><img src="s-lamp.jpg" alt="Дівчина під абажуром біля вікна"><figcaption><b>Лампи й абажури</b><span class="mono">D</span></figcaption></figure>
-        <figure class="zone"><img src="s-frame.jpg" alt="Дівчина на шкіряному дивані за старою віконною рамою"><figcaption><b>Стара рама</b><span class="mono">E</span></figcaption></figure>
-        <figure class="zone"><img src="s-tub-man.jpg" alt="Чоловік у ванні, позаду шкіряне крісло"><figcaption><b>Шкіряні крісла</b><span class="mono">F</span></figcaption></figure>
-        <figure class="zone"><img src="s-coat.jpg" alt="Жінка в пальті на тлі дерев'яної підлоги і дивана"><figcaption><b>Дерев'яна підлога</b><span class="mono">G</span></figcaption></figure>
-        <figure class="zone"><img src="s-family.jpg" alt="Мама з донькою дурачаться за віконною рамою"><figcaption><b>Для сімейних зйомок</b><span class="mono">H</span></figcaption></figure>
+        <figure class="zone wide"><img src="s-window-bw.jpg" alt="Пара на тлі великого вікна, чорно-білий кадр"><figcaption><b>Вікна на всю стіну</b><span>Головне джерело світла. М'яке світло для портретів і силуети на тлі рами.</span></figcaption></figure>
+        <figure class="zone wide"><img src="s-tub.jpg" alt="Дівчина у вінтажній ванні біля цегляної стіни"><figcaption><b>Вінтажна ванна</b><span>Окрема ванна на кованих ніжках біля червоної цегли.</span></figcaption></figure>
+        <figure class="zone"><img src="s-brick.jpg" alt="Дівчина з книгою біля білої цегляної стіни"><figcaption><b>Біла цегла</b><span>Світла стіна з дзеркалом, полицями й книжками.</span></figcaption></figure>
+        <figure class="zone"><img src="s-lamp.jpg" alt="Дівчина під абажуром біля вікна"><figcaption><b>Лампи з абажурами</b><span>Тепле світло для вечірніх і кіношних кадрів.</span></figcaption></figure>
+        <figure class="zone"><img src="s-frame.jpg" alt="Дівчина на шкіряному дивані за старою віконною рамою"><figcaption><b>Стара віконна рама</b><span>Декорація, крізь яку зручно знімати.</span></figcaption></figure>
+        <figure class="zone"><img src="s-tub-man.jpg" alt="Чоловік у ванні, позаду шкіряне крісло"><figcaption><b>Шкіряні крісла й диван</b><span>Вінтажні меблі, які легко пересунути.</span></figcaption></figure>
+        <figure class="zone"><img src="s-coat.jpg" alt="Жінка в пальті біля дверей, позаду диван і дерев'яна підлога"><figcaption><b>Дерев'яна підлога</b><span>Стара дошка, що добре виглядає в кадрі на повний зріст.</span></figcaption></figure>
+        <figure class="zone"><img src="s-family.jpg" alt="Мама з донькою дурачаться за віконною рамою"><figcaption><b>Для сімейних зйомок</b><span>Простір і для дорослих, і для дітей.</span></figcaption></figure>
       </div>
     </div>
   </section>
 
   <section class="block">
     <div class="wrap">
-      <div class="head"><span class="mono">Відгуки в Google</span><h2>Що кажуть орендарі</h2></div>
+      <div class="head"><span class="label">Кому підходить</span><h2>Хто в нас знімає</h2></div>
+      <div class="who">
+        <div><h3>Фотографи</h3><p>Портрети, сімейні зйомки, вагітність, love story.</p></div>
+        <div><h3>Бренди й блогери</h3><p>Контент для соцмереж і сайтів: одяг, косметика, особистий бренд.</p></div>
+        <div><h3>Відео</h3><p>Інтерв'ю, рекламні ролики, зйомки для соцмереж.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="head"><span class="label">Відгуки в Google</span><h2>5,0 з 11 відгуків</h2></div>
       <div class="quotes">
-        <blockquote>«Чудове природнє світло, чарівний мінімалізм»<cite class="mono">Kostia · Google</cite></blockquote>
-        <blockquote>«Моя улюблена фотостудія в Луцьку»<cite class="mono">Відгук у Google</cite></blockquote>
-        <blockquote>«Хороша лофт студія. Достатньо аксесуарів»<cite class="mono">Misha · Google</cite></blockquote>
+        <blockquote>«Чудове природнє світло, чарівний мінімалізм»<cite>Kostia, Google</cite></blockquote>
+        <blockquote>«Моя улюблена фотостудія в Луцьку»<cite>Відгук у Google</cite></blockquote>
+        <blockquote>«Хороша лофт студія. Достатньо аксесуарів»<cite>Misha, Google</cite></blockquote>
       </div>
     </div>
   </section>
 
   <section class="block">
     <div class="wrap">
-      <div class="head"><span class="mono">Перед бронюванням</span><h2>Коротко про оренду</h2></div>
+      <div class="head"><span class="label">Перед бронюванням</span><h2>Що варто знати</h2></div>
       <div class="faq">
-        <details open><summary>Скільки коштує оренда?</summary><p>600 грн за годину. Мінімальний час і знижки на довгу оренду: <span class="todo">уточнити</span>.</p></details>
-        <details><summary>Як забронювати?</summary><p>Напишіть у дірект Instagram @loftlutsk дату й час. Можна також зателефонувати: 063 560 5058.</p></details>
-        <details><summary>Чи є фотограф при студії?</summary><p>Так, Варвара Шевчук знімає в студії сімейні, портретні й парні фотосесії. <button type="button" class="todo" data-to="photographer" style="border:0;font:inherit;cursor:pointer">Подивитися її роботи</button></p></details>
-        <details><summary>Де саме студія?</summary><p>Луцьк, вул. Млинова, 13, у центрі міста. <a href="https://www.google.com/maps/place/?q=place_id:ChIJoR8iTvqZJUcRitG4JXTe7KQ">Відкрити на Google Maps</a>.</p></details>
+        <details open><summary>Коли найкраще світло?</summary><p>Зал освітлюють великі вікна, тож найбільше світла вдень. Узимку темніє рано: якщо потрібне денне світло, бронюйте ранок або обід. Студійне світло: <span class="todo">уточнити, чи є</span>.</p></details>
+        <details><summary>Яка мінімальна оренда?</summary><p><span class="todo">Уточнити: від 1 години чи більше, чи є знижка на кілька годин.</span></p></details>
+        <details><summary>Скільки людей може бути на зйомці?</summary><p><span class="todo">Уточнити.</span></p></details>
+        <details><summary>Чи тепло в студії взимку?</summary><p><span class="todo">Уточнити, як опалюється зал.</span></p></details>
+        <details><summary>Чи є де перевдягнутися?</summary><p><span class="todo">Уточнити: гримерка, дзеркало, вішаки.</span></p></details>
+        <details><summary>Чи можна замовити фотографа?</summary><p>Так, у студії знімає Варвара Шевчук: сімейні, дитячі й весільні зйомки. <button type="button" class="link-btn" data-to="photographer">Подивитися її роботи</button></p></details>
+        <details><summary>Як дістатися?</summary><p>Луцьк, вул. Млинова, 13, центр міста. <a href="https://www.google.com/maps/place/?q=place_id:ChIJoR8iTvqZJUcRitG4JXTe7KQ">Відкрити на Google Maps</a>.</p></details>
       </div>
     </div>
   </section>
@@ -404,12 +449,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
   <section class="cta">
     <div class="wrap">
       <div>
-        <p class="mono">600 грн / година</p>
+        <p class="note">600 грн за годину</p>
         <h2>Забронювати студію</h2>
       </div>
       <div>
         <div class="actions">
-          <a class="btn solid" href="https://www.instagram.com/loftlutsk/">Дірект @loftlutsk</a>
+          <a class="btn solid" href="https://www.instagram.com/loftlutsk/">Написати в дірект</a>
           <a class="btn" href="https://www.google.com/maps/place/?q=place_id:ChIJoR8iTvqZJUcRitG4JXTe7KQ">Як дістатися</a>
         </div>
         <div class="contacts"><span>Телефон: 063 560 5058</span><span>вул. Млинова, 13, Луцьк</span></div>
@@ -421,9 +466,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 </main>
 
 <footer>
-  <div class="wrap mono">
-    <span>Варвара Шевчук · Фотостудія Loft · Луцьк</span>
-    <span>Прототип сайту · листопад 2026</span>
+  <div class="wrap">
+    <span>Варвара Шевчук · фотостудія Loft · Луцьк</span>
+    <span>Прототип сайту, листопад 2026</span>
   </div>
 </footer>
 
@@ -440,6 +485,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
     document.getElementById('btn-studio').setAttribute('aria-pressed', String(mode==='studio'));
     document.title = mode==='studio' ? 'Фотостудія Loft, Луцьк' : 'Варвара Шевчук, фотограф у Луцьку';
   }
+  function setHash(name){ try{ history.replaceState(null,'','#'+name); }catch(e){ location.hash=name; } }
   function go(name){
     var cur = body.getAttribute('data-mode')==='studio' ? 'studio' : 'photographer';
     if(name===cur) return;
@@ -447,7 +493,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
     shutter.classList.remove('go'); void shutter.offsetWidth; shutter.classList.add('go');
     setTimeout(function(){ apply(name); window.scrollTo(0,0); setHash(name); }, 320);
   }
-  function setHash(name){ try{ history.replaceState(null,'','#'+name); }catch(e){ location.hash=name; } }
   document.addEventListener('click', function(e){
     var t=e.target.closest('[data-to]'); if(!t) return;
     e.preventDefault(); go(t.getAttribute('data-to'));
