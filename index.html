@@ -27,7 +27,8 @@
       "@type": "Person",
       "name": "Варвара Шевчук",
       "jobTitle": "Фотограф",
-      "description": "Сімейні, дитячі й весільні фотосесії, зйомка вагітності та пар у Луцьку.",
+      "description": "Фотограф у Луцьку з 2009 року: сімейні, дитячі, весільні та індивідуальні фотосесії, зйомка вагітності, пар і ню.",
+      "telephone": "+380635605058",
       "address": {"@type": "PostalAddress", "addressLocality": "Луцьк", "addressCountry": "UA"},
       "sameAs": ["https://www.instagram.com/vvvarka/"],
       "worksFor": {"@id": "#loft"}
@@ -40,6 +41,7 @@
       "foundingDate": "2016",
       "telephone": "+380635605058",
       "priceRange": "600 грн/год",
+      "floorSize": {"@type": "QuantitativeValue", "value": 80, "unitCode": "MTK"},
       "address": {"@type": "PostalAddress", "streetAddress": "вул. Млинова, 13", "addressLocality": "Луцьк", "addressRegion": "Волинська область", "postalCode": "43000", "addressCountry": "UA"},
       "geo": {"@type": "GeoCoordinates", "latitude": 50.7478081, "longitude": 25.3392894},
       "sameAs": ["https://www.instagram.com/loftlutsk/"]
@@ -136,6 +138,12 @@ section.block{padding-block:88px 16px}
 .price{border:1px dashed var(--accent);padding:28px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;background:color-mix(in srgb,var(--accent) 8%,transparent)}
 .price h3{font-size:34px}
 .price p{margin:8px 0 0;color:var(--muted)}
+.pricelist{list-style:none;margin:18px 0 0;padding:0;border-top:1px solid var(--line)}
+.pricelist li{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:12px 0;border-bottom:1px solid var(--line)}
+.pricelist span{max-width:46ch}
+.pricelist small{display:block;color:var(--muted);font-size:15px;margin-top:2px}
+.pricelist b{font-family:var(--display);font-weight:400;font-size:24px;color:var(--accent);white-space:nowrap}
+.cta .contacts a{color:inherit}
 
 .tips{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--ink)}
 .tips div{padding:26px 32px 26px 0;border-bottom:1px solid var(--line)}
@@ -253,7 +261,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
   <section class="hero">
     <div class="wrap">
       <div>
-        <div class="label">Фотограф у Луцьку</div>
+        <div class="label">Фотограф у Луцьку з 2009 року</div>
         <h1>Варвара <em>Шевчук</em></h1>
         <p class="lead">Знімаю родини, дітей, пари й весілля. Допомагаю розслабитися перед камерою, тож на фото ви виглядаєте собою, а не скутими.</p>
         <div class="actions">
@@ -291,7 +299,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
         <li><h3>Дитяча</h3><p>Малюки не сидять на місці, і не треба. Знімаю в русі й між іграми, а перерви на перекус закладаємо в план.</p><img src="p-mushroom.jpg" alt="" loading="lazy"></li>
         <li><h3>Вагітність</h3><p>Вдома, в студії чи на природі. Можна разом із партнером і старшою дитиною.</p><img src="p-bloom.jpg" alt="" loading="lazy"></li>
         <li><h3>Пари</h3><p>Love story, річниця або просто гарні фото удвох. Добре виходить і з улюбленою собакою.</p><img src="p-dogs.jpg" alt="" loading="lazy"></li>
-        <li><h3>Весілля</h3><p>Збори, церемонія, прогулянка, вечір. Скільки годин знімати, вирішуємо під ваш день.</p><img src="p-wed-door.jpg" alt="" loading="lazy"></li>
+        <li><h3>Індивідуальна</h3><p>Портрети для себе, для соцмереж чи на подарунок. Підкажу з образом і локацією.</p></li>
+        <li><h3>Ню</h3><p>Делікатна зйомка тіла. Деталі, образ і місце обговорюємо заздалегідь в особистих повідомленнях.</p></li>
+        <li><h3>Весілля</h3><p>Збори, церемонія, прогулянка, вечір. Знімаю від 7 годин, план складаємо під ваш день.</p><img src="p-wed-door.jpg" alt="" loading="lazy"></li>
       </ul>
     </div>
   </section>
@@ -301,9 +311,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
       <div class="price">
         <div>
           <h3>Вартість</h3>
-          <p><span class="todo">Уточнити у Варвари: ціна сімейної зйомки, скільки триває, скільки фото в обробці, ціна весілля за годину.</span></p>
+          <ul class="pricelist">
+            <li><span>Сімейна, дитяча, вагітність, пари, індивідуальна, ню<small>1 година зйомки, 150–300 оброблених фото</small></span><b>від 5000 грн</b></li>
+            <li><span>Весілля<small>весь день, від 7 годин зйомки</small></span><b>35 000 грн</b></li>
+          </ul>
+          <p>Фото готові за 7 днів, віддаю онлайн-галереєю. Друк і фотокнигу можна замовити окремо. Якщо знімаємо в студії, оренду оплачуєте окремо.</p>
         </div>
-        <a class="btn solid" href="https://www.instagram.com/vvvarka/">Дізнатися ціну</a>
+        <a class="btn solid" href="https://www.instagram.com/vvvarka/">Запитати про дату</a>
       </div>
     </div>
   </section>
@@ -326,8 +340,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
       <ol class="steps">
         <li><b>1</b><p>Пишете в Instagram: дату, хто буде в кадрі й де хочеться знімати.</p></li>
         <li><b>2</b><p>Узгоджуємо місце, час і образи. Надворі найгарніше світло вранці або за годину-дві до заходу.</p></li>
-        <li><b>3</b><p>Зйомка. Триває <span class="todo">уточнити</span>.</p></li>
-        <li><b>4</b><p>Готові фото за <span class="todo">… днів</span>, онлайн-галереєю.</p></li>
+        <li><b>3</b><p>Зйомка. Зазвичай триває годину, весілля — від 7 годин.</p></li>
+        <li><b>4</b><p>За 7 днів надсилаю 150–300 оброблених фото онлайн-галереєю.</p></li>
       </ol>
     </div>
   </section>
@@ -354,7 +368,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
       <div class="head"><span class="label">Питання</span><h2>Часто запитують</h2></div>
       <div class="faq">
         <details open><summary>Що буде, якщо в день зйомки дощ?</summary><p>Перенесемо на інший день або знімемо в студії Loft.</p></details>
-        <details><summary>Як забронювати дату?</summary><p>Напишіть в Instagram @vvvarka. Дата закріплюється після <span class="todo">уточнити: передоплата чи інше</span>.</p></details>
+        <details><summary>Як забронювати дату?</summary><p>Напишіть в Instagram @vvvarka або в Telegram чи Viber на 063 560 5058. Передоплати не беру, дату закріплюємо домовленістю.</p></details>
+        <details><summary>Виїжджаєте за місто?</summary><p>Так, можна знімати й за межами Луцька. Місце обговорюємо, коли плануємо зйомку.</p></details>
+        <details><summary>Допоможете з образом?</summary><p>Так, підкажу, що вдягнути й як поєднати кольори всієї родини.</p></details>
         <details><summary>Можна прийти з собакою?</summary><p>Так, такі зйомки є в портфоліо.</p></details>
       </div>
     </div>
@@ -371,7 +387,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
           <a class="btn solid" href="https://www.instagram.com/vvvarka/">Написати в Instagram</a>
           <button type="button" class="btn" data-to="studio">Подивитися студію</button>
         </div>
-        <div class="contacts"><span>Instagram: @vvvarka</span></div>
+        <div class="contacts"><span>Instagram: @vvvarka</span><span>Телефон, Telegram, Viber: <a href="tel:+380635605058">063 560 5058</a></span></div>
       </div>
     </div>
   </section>
@@ -386,11 +402,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
         <h1>Loft на <em>Млиновій</em></h1>
         <p class="lead">Зал із вікнами на всю стіну, цеглою й вінтажними меблями. Здаємо погодинно для фото- і відеозйомок.</p>
         <dl class="spec">
-          <div><dt>Ціна</dt><dd><b>600 грн</b> за годину</dd></div>
-          <div><dt>Адреса</dt><dd>вул. Млинова, 13, Луцьк</dd></div>
+          <div><dt>Ціна</dt><dd><b>600 грн</b> за годину, від 1 години</dd></div>
+          <div><dt>Знижка</dt><dd>−20 % від 3 годин</dd></div>
+          <div><dt>Зал</dt><dd>80 м², стелі 4 м, до 10 людей</dd></div>
+          <div><dt>Години</dt><dd>з 8:00 до 20:00</dd></div>
+          <div><dt>Адреса</dt><dd>вул. Млинова, 13, Луцьк, 3 поверх</dd></div>
           <div><dt>Світло</dt><dd>денне, з великих вікон</dd></div>
           <div><dt>Працюємо</dt><dd>з 2016 року</dd></div>
-          <div><dt>Бронювання</dt><dd>дірект @loftlutsk або 063 560 5058</dd></div>
+          <div><dt>Бронювання</dt><dd>дірект @loftlutsk або <a href="tel:+380635605058">063 560 5058</a></dd></div>
         </dl>
         <div class="actions">
           <a class="btn solid" href="https://www.instagram.com/loftlutsk/">Забронювати в дірект</a>
@@ -445,13 +464,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
     <div class="wrap">
       <div class="head"><span class="label">Перед бронюванням</span><h2>Що варто знати</h2></div>
       <div class="faq">
-        <details open><summary>Коли найкраще світло?</summary><p>Зал освітлюють великі вікна, тож найбільше світла вдень. Узимку темніє рано: якщо потрібне денне світло, бронюйте ранок або обід. Студійне світло: <span class="todo">уточнити, чи є</span>.</p></details>
-        <details><summary>Яка мінімальна оренда?</summary><p><span class="todo">Уточнити: від 1 години чи більше, чи є знижка на кілька годин.</span></p></details>
-        <details><summary>Скільки людей може бути на зйомці?</summary><p><span class="todo">Уточнити.</span></p></details>
-        <details><summary>Чи тепло в студії взимку?</summary><p><span class="todo">Уточнити, як опалюється зал.</span></p></details>
-        <details><summary>Чи є де перевдягнутися?</summary><p><span class="todo">Уточнити: гримерка, дзеркало, вішаки.</span></p></details>
+        <details open><summary>Коли найкраще світло?</summary><p>Зал освітлюють великі вікна, тож найбільше світла вдень. Узимку темніє рано: якщо потрібне денне світло, бронюйте ранок або обід. Студійного світла немає, увечері допомагають лампи з абажурами.</p></details>
+        <details><summary>Яка мінімальна оренда?</summary><p>Від 1 години, 600 грн за годину. Якщо берете від 3 годин, знижка 20 %.</p></details>
+        <details><summary>Скільки людей може бути на зйомці?</summary><p>До 10 людей. Зал 80 м², стелі 4 метри.</p></details>
+        <details><summary>Чи тепло в студії взимку?</summary><p>Так, узимку в студії тепло.</p></details>
+        <details><summary>Чи є де перевдягнутися?</summary><p>Так, є де перевдягнутися, і є дзеркало.</p></details>
+        <details><summary>Можна з тваринами?</summary><p>Так, з собакою чи котом можна.</p></details>
         <details><summary>Чи можна замовити фотографа?</summary><p>Так, у студії знімає Варвара Шевчук: сімейні, дитячі й весільні зйомки. <button type="button" class="link-btn" data-to="photographer">Подивитися її роботи</button></p></details>
-        <details><summary>Як дістатися?</summary><p>Луцьк, вул. Млинова, 13, центр міста. <a href="https://www.google.com/maps/place/?q=place_id:ChIJoR8iTvqZJUcRitG4JXTe7KQ">Відкрити на Google Maps</a>.</p></details>
+        <details><summary>Як дістатися?</summary><p>Луцьк, вул. Млинова, 13, центр міста. Студія на 3 поверсі, ліфта немає. Поруч є де припаркуватися. <a href="https://www.google.com/maps/place/?q=place_id:ChIJoR8iTvqZJUcRitG4JXTe7KQ">Відкрити на Google Maps</a>.</p></details>
       </div>
     </div>
   </section>
@@ -459,7 +479,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
   <section class="cta">
     <div class="wrap">
       <div>
-        <p class="note">600 грн за годину</p>
+        <p class="note">600 грн за годину · з 8:00 до 20:00</p>
         <h2>Забронювати студію</h2>
       </div>
       <div>
@@ -467,7 +487,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
           <a class="btn solid" href="https://www.instagram.com/loftlutsk/">Написати в дірект</a>
           <a class="btn" href="https://www.google.com/maps/place/?q=place_id:ChIJoR8iTvqZJUcRitG4JXTe7KQ">Як дістатися</a>
         </div>
-        <div class="contacts"><span>Телефон: 063 560 5058</span><span>вул. Млинова, 13, Луцьк</span></div>
+        <div class="contacts"><span>Телефон: <a href="tel:+380635605058">063 560 5058</a></span><span>вул. Млинова, 13, Луцьк</span></div>
       </div>
     </div>
   </section>
