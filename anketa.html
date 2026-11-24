@@ -7,7 +7,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="Анкета для сайту: кілька питань">
 <meta property="og:description" content="Так чи ні, плюс кілька цифр. Займе хвилин 5.">
-<meta property="og:image" content="https://tarasiukvova.github.io/vetra-varvara/og.jpg">
+<meta property="og:image" content="https://vvvarka.com/og.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@0;1&family=Ysabeau+Office:wght@400;500;600&display=swap" rel="stylesheet">
@@ -131,7 +131,6 @@ var SECTIONS=[
   ]},
   {title:"Сайт", items:[
     {id:"photos",t:"Можна брати фото з вашого Instagram і Instagram студії для сайту?"},
-    {id:"domain",t:"Яку адресу сайту беремо?",select:["loftlutsk.com","varvarashevchuk.com","обидві","інша"],noYN:true},
     {id:"phone",t:"Телефон для сайту",fields:[{id:"p",t:"Номер",u:"",ph:"063 560 5058"}],noYN:true},
     {id:"msg",t:"Можна писати в Telegram або Viber на цей номер?"},
     {id:"years",t:"З якого року знімаєте?",fields:[{id:"y",t:"Рік",u:"",num:true}],noYN:true},
@@ -258,7 +257,7 @@ function update(){
   document.getElementById("ptext").textContent="Заповнено "+a+" з "+tot;
   var s=summary();
   document.getElementById("preview").textContent=s;
-  document.getElementById("tg").href="https://t.me/share/url?url="+encodeURIComponent("https://tarasiukvova.github.io/vetra-varvara/anketa.html")+"&text="+encodeURIComponent("\n"+s);
+  document.getElementById("tg").href="https://t.me/share/url?url="+encodeURIComponent("https://vvvarka.com/anketa.html")+"&text="+encodeURIComponent("\n"+s);
 }
 document.getElementById("copy").addEventListener("click",function(){
   var s=summary(), ok=document.getElementById("ok");
