@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Анкета для сайту · Варвара і Loft</title>
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Анкета для сайту: кілька питань">
+<meta property="og:description" content="Так чи ні, плюс кілька цифр. Займе хвилин 5.">
+<meta property="og:image" content="https://tarasiukvova.github.io/vetra-varvara/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@0;1&family=Ysabeau+Office:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#E9E5DD;
+  --card:#F4F1EB;
+  --ink:#1F1B17;
+  --muted:#6E665D;
+  --line:#CDC6BA;
+  --accent:#B98A16;
+  --yes:#3F6B3A;
+  --no:#8A3B2E;
+  --display:"Bona Nova", Georgia, serif;
+  --body:"Ysabeau Office", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.5 var(--body)}
+.wrap{width:min(680px,100% - 28px);margin-inline:auto}
+header{padding:36px 0 8px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(38px,9vw,56px);line-height:1;margin:0}
+h1 em{color:var(--accent)}
+.intro{color:var(--muted);margin:14px 0 0;max-width:52ch}
+.progress{position:sticky;top:0;z-index:5;background:var(--paper);padding:12px 0;border-bottom:1px solid var(--line)}
+.progress .bar{height:6px;background:var(--line);border-radius:6px;overflow:hidden}
+.progress .bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .3s ease}
+.progress small{display:block;margin-top:6px;color:var(--muted);font-size:14px}
+h2{font-family:var(--display);font-weight:400;font-size:32px;margin:36px 0 12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px}
+.q{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.q label.t{font-weight:600;font-size:18px;flex:1 1 200px}
+.q .hint{flex-basis:100%;color:var(--muted);font-size:15px;margin-top:-4px}
+.yn{display:inline-flex;border:1px solid var(--ink);border-radius:999px;overflow:hidden}
+.yn button{appearance:none;border:0;background:none;font:600 16px/1 var(--body);padding:11px 20px;cursor:pointer;color:var(--ink);min-width:64px}
+.yn button+button{border-left:1px solid var(--ink)}
+.yn button[aria-pressed="true"][data-v="так"]{background:var(--yes);color:#fff}
+.yn button[aria-pressed="true"][data-v="ні"]{background:var(--no);color:#fff}
+.more{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px}
+.more[hidden]{display:none}
+.field{display:flex;flex-direction:column;gap:4px}
+.field span{font-size:14px;color:var(--muted)}
+.field .in{display:flex;align-items:center;border:1px solid var(--line);border-radius:10px;background:#fff;padding:0 10px}
+.field input,.field textarea,.field select{border:0;outline:0;background:none;font:500 17px/1.3 var(--body);padding:10px 0;width:100%;color:var(--ink)}
+.field textarea{min-height:70px;resize:vertical}
+.field .u{color:var(--muted);font-size:15px;white-space:nowrap;padding-left:6px}
+.field .in:focus-within{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 25%,transparent)}
+.wide{grid-column:1/-1}
+.send{margin:36px 0 60px;background:var(--ink);color:var(--paper);border-radius:16px;padding:22px}
+.send h2{margin-top:0;color:var(--paper)}
+.send p{margin:0 0 14px;opacity:.8}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{appearance:none;border:1px solid var(--paper);background:none;color:var(--paper);font:600 16px/1 var(--body);padding:14px 20px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-flex}
+.btn.solid{background:var(--paper);color:var(--ink)}
+.btn:focus-visible,.yn button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+pre{white-space:pre-wrap;background:rgba(255,255,255,.08);border-radius:10px;padding:12px;font:400 14px/1.45 var(--body);max-height:260px;overflow:auto;margin:14px 0 0}
+.ok{margin-top:10px;color:#C9E3B8;min-height:1.4em}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Кілька питань для <em>сайту</em></h1>
+    <p class="intro">Варваро, тут майже все — «так» чи «ні», і кілька цифр. Чого не знаєте, пропускайте. Відповіді зберігаються в телефоні, тож можна заповнити частину й повернутися пізніше. Наприкінці натисніть «Надіслати».</p>
+  </div>
+</header>
+
+<div class="progress"><div class="wrap"><div class="bar"><i id="pbar"></i></div><small id="ptext">Заповнено 0 з 0</small></div></div>
+
+<main class="wrap" id="form"></main>
+
+<section class="wrap">
+  <div class="send">
+    <h2>Готово?</h2>
+    <p>Натисніть «Надіслати в Telegram» і виберіть Володимира. Або скопіюйте відповіді й вставте в будь-який месенджер.</p>
+    <div class="btns">
+      <a class="btn solid" id="tg" href="https://t.me/share/url" target="_blank" rel="noopener">Надіслати в Telegram</a>
+      <button class="btn" id="copy" type="button">Скопіювати відповіді</button>
+    </div>
+    <div class="ok" id="ok" role="status"></div>
+    <pre id="preview"></pre>
+  </div>
+</section>
+
+<script>
+var SHOOTS=[
+  {id:"family",t:"Сімейна"},
+  {id:"kids",t:"Дитяча"},
+  {id:"preg",t:"Вагітність"},
+  {id:"couple",t:"Пари, love story"},
+  {id:"solo",t:"Індивідуальна"},
+  {id:"nude",t:"Ню", extra:[{id:"show",t:"Згадувати ню на сайті?",yn:true}]},
+  {id:"wedding",t:"Весілля", wedding:true}
+];
+var SECTIONS=[
+  {title:"Ваші зйомки", hint:"Для кожної: чи знімаєте, і якщо так — ціна, тривалість і скільки фото в обробці.", shoots:true},
+  {title:"Умови зйомок", items:[
+    {id:"days",t:"Через скільки днів готові фото?",fields:[{id:"n",t:"Строк",u:"днів",num:true}],noYN:true},
+    {id:"prepay",t:"Дату закріплюєте передоплатою?",fields:[{id:"sum",t:"Сума або відсоток",u:"грн / %"}]},
+    {id:"rain",t:"У дощ можна перенести зйомку або піти в студію?"},
+    {id:"trip",t:"Виїжджаєте за місто?",fields:[{id:"extra",t:"Доплата",u:"грн"}]},
+    {id:"studioIncl",t:"Оренда студії входить у ціну зйомки?"},
+    {id:"print",t:"Робите друк або фотокнигу?"},
+    {id:"gallery",t:"Фото віддаєте онлайн-галереєю (посиланням)?"},
+    {id:"dress",t:"Допомагаєте з образом, порадами щодо одягу?"}
+  ]},
+  {title:"Студія Loft", items:[
+    {id:"min",t:"Мінімальна оренда",fields:[{id:"h",t:"Від",u:"год",num:true}],noYN:true},
+    {id:"disc",t:"Є знижка, якщо брати кілька годин?",fields:[{id:"from",t:"Від",u:"год",num:true},{id:"pct",t:"Знижка",u:"%",num:true}]},
+    {id:"people",t:"Скільки людей максимум на зйомці?",fields:[{id:"n",t:"До",u:"осіб",num:true}],noYN:true},
+    {id:"area",t:"Площа залу",fields:[{id:"m2",t:"Площа",u:"м²",num:true},{id:"ceil",t:"Висота стелі",u:"м",num:true}],noYN:true},
+    {id:"warm",t:"Узимку в студії тепло?"},
+    {id:"room",t:"Є де перевдягнутися (гримерка, дзеркало)?"},
+    {id:"light",t:"Є студійне світло?",fields:[{id:"kind",t:"Яке",u:"",ph:"імпульсне / постійне"}]},
+    {id:"pets",t:"Можна з тваринами?"},
+    {id:"parking",t:"Є де припаркуватися поруч?"},
+    {id:"floor",t:"На якому поверсі, є ліфт?",fields:[{id:"f",t:"Поверх, ліфт",u:"",ph:"напр. 3, без ліфта"}],noYN:true},
+    {id:"hours",t:"Години роботи студії",fields:[{id:"h",t:"Години",u:"",ph:"напр. щодня 9–21"}],noYN:true}
+  ]},
+  {title:"Сайт", items:[
+    {id:"photos",t:"Можна брати фото з вашого Instagram і Instagram студії для сайту?"},
+    {id:"domain",t:"Яку адресу сайту беремо?",select:["loftlutsk.com","varvarashevchuk.com","обидві","інша"],noYN:true},
+    {id:"phone",t:"Телефон для сайту",fields:[{id:"p",t:"Номер",u:"",ph:"063 560 5058"}],noYN:true},
+    {id:"msg",t:"Можна писати в Telegram або Viber на цей номер?"},
+    {id:"years",t:"З якого року знімаєте?",fields:[{id:"y",t:"Рік",u:"",num:true}],noYN:true},
+    {id:"notes",t:"Що додати чи прибрати на сайті?",textarea:true,noYN:true}
+  ]}
+];
+
+var KEY="varvara-anketa-v1", state={};
+try{ state=JSON.parse(localStorage.getItem(KEY)||"{}"); }catch(e){ state={}; }
+function save(){ try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){} update(); }
+
+var form=document.getElementById("form");
+function el(tag,attrs,html){ var e=document.createElement(tag); for(var k in attrs){ if(k==="class") e.className=attrs[k]; else e.setAttribute(k,attrs[k]); } if(html!=null) e.innerHTML=html; return e; }
+
+function ynBlock(key, label, hint){
+  var card=el("div",{class:"card"}), q=el("div",{class:"q"});
+  q.appendChild(el("label",{class:"t"},label));
+  var yn=el("div",{class:"yn",role:"group","aria-label":label});
+  ["так","ні"].forEach(function(v){
+    var b=el("button",{type:"button","data-v":v,"aria-pressed":String(state[key]===v)},v[0].toUpperCase()+v.slice(1));
+    b.addEventListener("click",function(){ state[key]=(state[key]===v?undefined:v); if(state[key]===undefined) delete state[key];
+      yn.querySelectorAll("button").forEach(function(x){ x.setAttribute("aria-pressed",String(state[key]===x.dataset.v)); });
+      var m=card.querySelector(".more"); if(m) m.hidden=(state[key]!=="так"); save(); });
+    yn.appendChild(b);
+  });
+  q.appendChild(yn);
+  if(hint) q.appendChild(el("div",{class:"hint"},hint));
+  card.appendChild(q);
+  return card;
+}
+function fieldBox(key,f){
+  var w=el("label",{class:"field"+(f.wide?" wide":"")}); w.appendChild(el("span",{},f.t));
+  var box=el("div",{class:"in"}), inp;
+  if(f.textarea){ inp=el("textarea",{id:key}); }
+  else if(f.select){ inp=el("select",{id:key}); inp.appendChild(el("option",{value:""},"— обрати —")); f.select.forEach(function(o){ var op=el("option",{value:o},o); inp.appendChild(op); }); }
+  else { inp=el("input",{id:key,type:"text",inputmode:f.num?"decimal":"text",placeholder:f.ph||"",autocomplete:"off"}); }
+  if(state[key]!=null) inp.value=state[key];
+  inp.addEventListener("input",function(){ if(inp.value.trim()==="") delete state[key]; else state[key]=inp.value; save(); });
+  box.appendChild(inp); if(f.u) box.appendChild(el("span",{class:"u"},f.u));
+  w.appendChild(box); return w;
+}
+
+SECTIONS.forEach(function(s){
+  form.appendChild(el("h2",{},s.title));
+  if(s.hint) form.appendChild(el("p",{class:"intro",style:"margin-top:-4px"},s.hint));
+  if(s.shoots){
+    SHOOTS.forEach(function(sh){
+      var key="shoot."+sh.id;
+      var card=ynBlock(key, sh.t);
+      var more=el("div",{class:"more"}); more.hidden=(state[key]!=="так");
+      if(sh.wedding){
+        more.appendChild(fieldBox(key+".hour",{t:"Ціна за годину",u:"грн",num:true}));
+        more.appendChild(fieldBox(key+".min",{t:"Мінімум",u:"год",num:true}));
+        more.appendChild(fieldBox(key+".full",{t:"Або за весь день",u:"грн",num:true}));
+      }else{
+        more.appendChild(fieldBox(key+".price",{t:"Ціна від",u:"грн",num:true}));
+        more.appendChild(fieldBox(key+".dur",{t:"Тривалість",u:"год",num:true}));
+        more.appendChild(fieldBox(key+".photos",{t:"Фото в обробці",u:"шт",num:true}));
+      }
+      (sh.extra||[]).forEach(function(x){
+        var k2=key+"."+x.id, sub=ynBlock(k2,x.t); sub.classList.add("wide"); sub.style.margin="4px 0 0"; more.appendChild(sub);
+      });
+      card.appendChild(more); form.appendChild(card);
+    });
+    var other=el("div",{class:"card"}); other.appendChild(fieldBox("shoot.other",{t:"Інші зйомки, яких тут немає (назва й ціна)",textarea:true}));
+    form.appendChild(other);
+    return;
+  }
+  s.items.forEach(function(it){
+    var key="q."+it.id, card;
+    if(it.noYN){
+      card=el("div",{class:"card"}); card.appendChild(el("div",{class:"q"},'<label class="t">'+it.t+'</label>'));
+      var m=el("div",{class:"more"});
+      if(it.textarea) m.appendChild(fieldBox(key,{t:"Коментар",textarea:true,wide:true}));
+      else if(it.select) m.appendChild(fieldBox(key,{t:"Варіант",select:it.select}));
+      (it.fields||[]).forEach(function(f){ m.appendChild(fieldBox(key+"."+f.id,f)); });
+      card.appendChild(m);
+    }else{
+      card=ynBlock(key,it.t);
+      if(it.fields){ var mm=el("div",{class:"more"}); mm.hidden=(state[key]!=="так"); it.fields.forEach(function(f){ mm.appendChild(fieldBox(key+"."+f.id,f)); }); card.appendChild(mm); }
+    }
+    form.appendChild(card);
+  });
+});
+
+function countTotal(){ return SHOOTS.length + SECTIONS.slice(1).reduce(function(a,s){return a+s.items.length;},0); }
+function answered(){
+  var n=0;
+  SHOOTS.forEach(function(sh){ if(state["shoot."+sh.id]) n++; });
+  SECTIONS.slice(1).forEach(function(s){ s.items.forEach(function(it){ var k="q."+it.id; if(Object.keys(state).some(function(x){return x===k||x.indexOf(k+".")===0;})) n++; }); });
+  return n;
+}
+function summary(){
+  var L=["Анкета для сайту (Варвара / Loft)",""];
+  L.push("ЗЙОМКИ");
+  SHOOTS.forEach(function(sh){
+    var k="shoot."+sh.id, v=state[k]; if(!v) return;
+    var line="• "+sh.t+": "+v;
+    if(v==="так"){
+      var p=[];
+      if(sh.wedding){ if(state[k+".hour"]) p.push(state[k+".hour"]+" грн/год"); if(state[k+".min"]) p.push("мін. "+state[k+".min"]+" год"); if(state[k+".full"]) p.push("день "+state[k+".full"]+" грн"); }
+      else { if(state[k+".price"]) p.push("від "+state[k+".price"]+" грн"); if(state[k+".dur"]) p.push(state[k+".dur"]+" год"); if(state[k+".photos"]) p.push(state[k+".photos"]+" фото"); }
+      if(state[k+".show"]) p.push("на сайті: "+state[k+".show"]);
+      if(p.length) line+=" — "+p.join(", ");
+    }
+    L.push(line);
+  });
+  if(state["shoot.other"]) L.push("• Інше: "+state["shoot.other"]);
+  SECTIONS.slice(1).forEach(function(s){
+    var lines=[];
+    s.items.forEach(function(it){
+      var k="q."+it.id, parts=[];
+      if(state[k]) parts.push(state[k]);
+      (it.fields||[]).forEach(function(f){ var v=state[k+"."+f.id]; if(v) parts.push(f.t.toLowerCase()+" "+v+(f.u?" "+f.u:"")); });
+      if(parts.length) lines.push("• "+it.t+" "+parts.join(", "));
+    });
+    if(lines.length){ L.push(""); L.push(s.title.toUpperCase()); L=L.concat(lines); }
+  });
+  return L.join("\n");
+}
+function update(){
+  var tot=countTotal(), a=answered();
+  document.getElementById("pbar").style.width=Math.round(a/tot*100)+"%";
+  document.getElementById("ptext").textContent="Заповнено "+a+" з "+tot;
+  var s=summary();
+  document.getElementById("preview").textContent=s;
+  document.getElementById("tg").href="https://t.me/share/url?url="+encodeURIComponent("https://tarasiukvova.github.io/vetra-varvara/anketa.html")+"&text="+encodeURIComponent("\n"+s);
+}
+document.getElementById("copy").addEventListener("click",function(){
+  var s=summary(), ok=document.getElementById("ok");
+  function done(){ ok.textContent="Скопійовано. Вставте в месенджер і надішліть Володимиру."; }
+  if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(s).then(done,function(){ fallback(); }); } else fallback();
+  function fallback(){ var t=document.createElement("textarea"); t.value=s; document.body.appendChild(t); t.select(); try{ document.execCommand("copy"); done(); }catch(e){ ok.textContent="Не вдалося скопіювати: виділіть текст нижче вручну."; } t.remove(); }
+});
+update();
+</script>
+</body>
+</html>
